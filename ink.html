@@ -18,11 +18,20 @@
 	</style>
 	<script type="text/javascript">
 		window.onload=function(){
+
 			var oBox=document.getElementById('box');
 			var oBtn=document.getElementById('btn');
+			var img=new Image();
+			img.src="ink.png";
+			if(img.width==0){
+				oBtn.style.display='none';	
+			}else{
+				oBtn.style.display='block';
+			}
 			oBtn.onclick=function(){
 				oBox.style.animation='run 1.5s steps(24) ';
 				setTimeout(function(){oBox.style.animation=''},1600);
+
 			}
 		}
 	</script>
