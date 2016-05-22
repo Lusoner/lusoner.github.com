@@ -5,7 +5,7 @@
 	<title>Document</title>
 	<style type="text/css">
 		#btn{width:200px;height:50px;background: #3f2f44;color:#fff;cursor: pointer;margin-left:-100px;position: relative;left:50%;text-align: center;}
-		#box{width:640px;height:360px;;background: url(img/ink.png) repeat-x;background-position:-16000px;animation-fill-mode: forwards;margin-left:-320px;left:50%;position: relative;border:1px solid #3f2f44;transform:scale(3);margin-top: 360px; }
+		#box{width:640px;height:360px;;background: url(img/ink2.png) repeat-x;background-position:-16000px;animation-fill-mode: forwards;margin-left:-320px;left:50%;position: relative;border:1px solid #3f2f44;transform:scale(3);margin-top: 360px; }
 		@keyframes run{
 			0%{
 				background-position:0px;
@@ -23,14 +23,14 @@
 			var oBox=document.getElementById('box');
 			var oBtn=document.getElementById('btn');
 			var img=new Image();
-			img.src="ink.png";
+			img.src="img/ink2.png";
 			if(img.width==0){
 				oBtn.style.display='none';	
 			}else{
 				oBtn.style.display='block';
 			}
 			oBtn.onclick=function(){
-				oBox.style.animation='run 1.5s steps(24) ';
+				oBox.style.animation='run 2s steps(24) ';
 				setTimeout(function(){oBox.style.animation=''},1600);
 
 			}

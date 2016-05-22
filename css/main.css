@@ -53,8 +53,15 @@ body,html{height:100%;}
 .banner_txt{position: absolute;left:30%;color:#fff;font-size: 50px;top:5%;}
 .banners{height:600px;width:50%;background: #ccc;position: absolute;right: 0;top:0;}
 .blank{height:600px;}
-.mini_banner{font-size: 40px;}
-.mini_banner li{height:200px;text-align: center;line-height: 200px;}
+.mini_banner{font-size: 40px;padding:0 20%;position: absolute;width:60%;}
+.mini_banner li:nth-child(even){left:80%;}
+.mini_banner li{height:20%;text-align: center;line-height: 50%;width:200px;position:relative; }
 .cover{height:100%;width:100%;z-index: 2;position:fixed;top:0;left:-100%;display: none;-webkit-transition:1s ease-in;transition:1s ease-in;-moz-transition:1s ease-in;opacity: 0;}
 .cover_bg{background: #333;opacity: 0.9;height: 100%;width:100%;}
-.cover_content{position: absolute;top:0;left:0;}
+.cover_content{position: absolute;top:50%;left:6%;height:50%;width:40%;margin-top: -5%}
+.cover_content ul{height:100%;}
+.cover_content li{color:#fff;height:15%;font-size:30px;position: relative;width:95%;overflow: hidden}
+.cover_content strong{border-bottom: 2px solid red;padding-bottom: 20px;font-family: "QL";}
+.cover_content span{height:100%;position: relative;overflow: hidden}
+.font_slide{position: absolute;top:0;left:0%;height:100%;width:100%;background: #fff;opacity: 1;-webkit-transition:0.5s ease-in;transition:0.5s ease-in;-moz-transition:0.5s ease-in;}
+

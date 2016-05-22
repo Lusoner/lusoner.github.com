@@ -3,12 +3,20 @@ document.addEventListener('DOMContentLoaded',function(){
 	var oNav=document.querySelector('.nav_button');
 	var oCover=document.querySelector('.cover');
 	var oCoverTxt=document.querySelector('.cover_content');
-
+	var oFontSlide=document.querySelectorAll('.font_slide');
 	oNav.addEventListener('click',function(){
 		if(getStyle(oCover,'display')=='none'&&getStyle(oCover,'opacity')==0){
 			addClass(document.documentElement.children[1],'menu_open')
 			setPre(oNav,'transform','translate('+(document.documentElement.clientWidth-oNav.offsetWidth)+'px,0)  rotate(180deg)');
 			oCover.style.display='block';
+			for(var i=0;i<oFontSlide.length;i++){
+				console.log(oFontSlide[i]);
+				(function(index){
+					setTimeout(function(){
+						oFontSlide[index].style.left='250%';
+					},i*100+1000);
+				})(i)
+			}
 			setTimeout(function(){
 				oCover.style.opacity=0.9;
 				oCover.style.left=0;
@@ -18,6 +26,9 @@ document.addEventListener('DOMContentLoaded',function(){
 				removeClass(document.documentElement.children[1],'menu_open');
 				setPre(oNav,'transform','translate(0px,0) rotate(0deg)');
 				oCover.style.opacity=0;
+				for(var i=0;i<oFontSlide.length;i++){
+					oFontSlide[i].style.left='0%';
+			}
 				oCover.style.left='-100%';
 				setTimeout(function(){
 					oCover.style.display='none';
